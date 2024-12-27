@@ -15,4 +15,10 @@ $(() => {
     $("<li>").text($input.val()).appendTo("ul"); //新しいリストの追加　createElement()
     $input.val("").focus();
   });
+  $("ul").click((e) => {
+    if (e.target.nodeName !== "LI" || !confirm("Are you sure?")) {
+      return;
+    }
+    $(e.target).fadeOut(); //fadeOutはjQueryで取得したオブジェクトでしか使えない　//jQueryのオブジェクトに変換する必要がある$()
+  });
 });

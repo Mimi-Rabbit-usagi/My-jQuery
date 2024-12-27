@@ -9,6 +9,15 @@
         color: red;
         font-weight: bold;
       }
+      li {
+        cursor: pointer;
+      }
+      li:hover::after {
+        content: "[x]";
+        font-size: 14px;
+        color: #aaa;
+        margin-left: 4px;
+      }
     </style>
   </head>
   <body>
